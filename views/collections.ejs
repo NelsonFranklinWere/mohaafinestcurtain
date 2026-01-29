@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="curtain collections, premium curtains, luxury curtains, turkish curtains, chinese curtains, sheer curtains, thermal curtains, velvet curtains, blackout curtains, motorized curtains, custom curtains, linen curtains, voile curtains, jacquard curtains, eyelet curtains, tab top curtains, grommet curtains, pencil pleat curtains, french pleat curtains, austrian curtains, cafe curtains, tier curtains, swag curtains, balloon curtains, hobbled curtains, ripple fold curtains, box pleat curtains, pinch pleat curtains, goblet pleat curtains, cartridge pleat curtains, smocked curtains, cottage curtains, country curtains, modern curtains, traditional curtains, contemporary curtains, minimalist curtains, bohemian curtains, rustic curtains, industrial curtains, scandinavian curtains, mediterranean curtains, tropical curtains, floral curtains, geometric curtains, striped curtains, solid color curtains, best curtains nairobi, luxury curtains eastleigh">
+    <meta name="author" content="Mohaa Finest Curtains">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="KE-30">
+    <meta name="geo.placename" content="Eastleigh, Nairobi">
+    <meta name="geo.position" content="-1.2767;36.8219">
+    <meta name="ICBM" content="-1.2767, 36.8219">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/collections">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="/images/logo.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mohaa Finest Curtains">
+    <meta property="og:locale" content="en_KE">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/collections">
+    <meta property="twitter:title" content="<%= title %>">
+    <meta property="twitter:description" content="<%= description %>">
+    <meta property="twitter:image" content="/images/logo.jpeg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+    <!-- WhatsApp Business API ready -->
+    <meta property="business:contact_data:street_address" content="Moyale Mall, Eastleigh">
+    <meta property="business:contact_data:locality" content="Nairobi">
+    <meta property="business:contact_data:country_name" content="Kenya">
+    <meta property="business:contact_data:phone_number" content="<%= phoneIntl %>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains Logo" class="logo">
+                <span class="brand-name">Mohaa Finest Curtains</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+                <a href="/collections" class="nav-link <%= currentPage === 'collections' ? 'active' : '' %>">Collections</a>
+                <a href="/services" class="nav-link <%= currentPage === 'services' ? 'active' : '' %>">Services</a>
+                <a href="/about" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">About</a>
+                <a href="/blog" class="nav-link <%= currentPage === 'blog' ? 'active' : '' %>">Curtain Tips</a>
+                <a href="/how-it-works" class="nav-link <%= currentPage === 'how-it-works' ? 'active' : '' %>">How It Works</a>
+                <a href="/gallery" class="nav-link <%= currentPage === 'gallery' ? 'active' : '' %>">Gallery</a>
+                <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Collections Hero -->
+        <section class="collections-hero">
+            <div class="container">
+                <h1>Premium Curtain Collections</h1>
+                <p>Discover our extensive selection of 44 premium curtains for every style and budget</p>
+            </div>
+        </section>
+
+        <!-- Product Collections -->
+        <section class="product-collections">
+            <div class="container">
+                <div class="collections-header">
+                    <h2>Our Complete Collections</h2>
+                    <p>From elegant sheer curtains to luxurious thermal drapes, find the perfect window treatment for your space</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/turkish-curtains.jpg" alt="Turkish Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Turkish Curtains</h3>
+                            <p>Premium quality Turkish fabrics with elegant patterns and superior drape. Perfect for modern and traditional interiors.</p>
+                            <div class="product-price">KSh 15,000 - 35,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Turkish%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/chinese-curtains.jpg" alt="Chinese Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Chinese Curtains</h3>
+                            <p>Luxurious silk-like fabrics with intricate designs. Ideal for creating a sophisticated and elegant atmosphere.</p>
+                            <div class="product-price">KSh 18,000 - 45,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Chinese%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/sheer-curtains.jpg" alt="Sheer Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Sheer Curtains</h3>
+                            <p>Light and airy fabrics that allow natural light while providing privacy. Perfect for bright, spacious rooms.</p>
+                            <div class="product-price">KSh 10,000 - 25,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Sheer%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/french-pleat-curtains.jpg" alt="Thermal Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Thermal Curtains</h3>
+                            <p>Energy-efficient curtains that insulate your home and reduce energy costs. Available in various colors and patterns.</p>
+                            <div class="product-price">KSh 20,000 - 40,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Thermal%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/grommet-curtains.jpg" alt="Velvet Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Velvet Curtains</h3>
+                            <p>Luxurious velvet fabrics for a sophisticated look. Excellent light blocking and sound dampening properties.</p>
+                            <div class="product-price">KSh 25,000 - 50,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Velvet%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/pencil-pleat-curtains.jpg" alt="Motorized Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Motorized Curtains</h3>
+                            <p>Smart curtains with remote control operation. Perfect for modern homes seeking convenience and automation.</p>
+                            <div class="product-price">KSh 35,000 - 80,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Motorized%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/blackout-curtains.jpg" alt="Blackout Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Blackout Curtains</h3>
+                            <p>Complete light blocking curtains ideal for bedrooms and media rooms. Ensures total darkness for better sleep.</p>
+                            <div class="product-price">KSh 12,000 - 30,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Blackout%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/custom-curtains.jpg" alt="Custom Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Custom Curtains</h3>
+                            <p>Tailor-made curtains designed specifically for your space. Choose your own fabrics, colors, and dimensions.</p>
+                            <div class="product-price">KSh 15,000 - 60,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Custom%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/linen-curtains.jpg" alt="Linen Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Linen Curtains</h3>
+                            <p>Natural linen fabrics that add texture and elegance to any room. Breathable and naturally antimicrobial.</p>
+                            <div class="product-price">KSh 22,000 - 45,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Linen%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/voile-curtains.jpg" alt="Voile Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Voile Curtains</h3>
+                            <p>Ultra-light and translucent fabrics that create a soft, romantic atmosphere. Perfect for layered window treatments.</p>
+                            <div class="product-price">KSh 8,000 - 20,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Voile%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 11 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/jacquard-curtains.jpg" alt="Jacquard Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Jacquard Curtains</h3>
+                            <p>Intricate woven patterns that add depth and luxury to your windows. Available in various design motifs.</p>
+                            <div class="product-price">KSh 28,000 - 55,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Jacquard%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 12 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/eyelet-curtains.jpg" alt="Eyelet Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Eyelet Curtains</h3>
+                            <p>Modern curtain heading with metal eyelets for smooth gliding. Creates contemporary pleats and fullness.</p>
+                            <div class="product-price">KSh 14,000 - 32,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Eyelet%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 13 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/tab-top-curtains.jpg" alt="Tab Top Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Tab Top Curtains</h3>
+                            <p>Casual and relaxed look with fabric tabs that slide easily over curtain rods. Perfect for informal settings.</p>
+                            <div class="product-price">KSh 11,000 - 28,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Tab%20Top%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 14 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/grommet-curtains.jpg" alt="Grommet Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Grommet Curtains</h3>
+                            <p>Stylish metal grommets create even pleats and allow smooth movement. Modern and sleek appearance.</p>
+                            <div class="product-price">KSh 16,000 - 38,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Grommet%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 15 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/pencil-pleat-curtains.jpg" alt="Pencil Pleat Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Pencil Pleat Curtains</h3>
+                            <p>Classic curtain heading with narrow, evenly spaced pleats. Traditional and versatile style.</p>
+                            <div class="product-price">KSh 13,000 - 31,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Pencil%20Pleat%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 16 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/french-pleat-curtains.jpg" alt="French Pleat Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>French Pleat Curtains</h3>
+                            <p>Elegant three-finger pleats that create a sophisticated, tailored look. Perfect for formal rooms.</p>
+                            <div class="product-price">KSh 17,000 - 42,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20French%20Pleat%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 17 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/grommet-curtains.jpg" alt="Austrian Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Austrian Curtains</h3>
+                            <p>Romantic style with deep scallops that create elegant folds. Adds a touch of vintage charm.</p>
+                            <div class="product-price">KSh 19,000 - 48,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Austrian%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 18 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/pencil-pleat-curtains.jpg" alt="Cafe Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Cafe Curtains</h3>
+                            <p>Short curtains that cover only the bottom half of windows. Perfect for kitchens and casual spaces.</p>
+                            <div class="product-price">KSh 7,000 - 18,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Cafe%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 19 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/french-pleat-curtains.jpg" alt="Tier Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Tier Curtains</h3>
+                            <p>Short curtains that hang from the middle of the window. Often used with valances for layered look.</p>
+                            <div class="product-price">KSh 9,000 - 22,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Tier%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 20 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/grommet-curtains.jpg" alt="Swag Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Swag Curtains</h3>
+                            <p>Dramatic arched fabric that drapes elegantly across windows. Creates a formal, theatrical appearance.</p>
+                            <div class="product-price">KSh 21,000 - 52,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Swag%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 21 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/pencil-pleat-curtains.jpg" alt="Balloon Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Balloon Curtains</h3>
+                            <p>Full, rounded pleats that create a soft, cloud-like effect. Adds volume and movement to windows.</p>
+                            <div class="product-price">KSh 18,000 - 44,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Balloon%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 22 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/french-pleat-curtains.jpg" alt="Hobbled Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Hobbled Curtains</h3>
+                            <p>Curtains with fabric bands that create soft, bloused sections. Adds texture and dimension.</p>
+                            <div class="product-price">KSh 16,000 - 39,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Hobbled%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 23 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/grommet-curtains.jpg" alt="Ripple Fold Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Ripple Fold Curtains</h3>
+                            <p>Contemporary S-fold pleats that create smooth, waterfall-like cascades. Modern and sleek design.</p>
+                            <div class="product-price">KSh 23,000 - 58,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Ripple%20Fold%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 24 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/pencil-pleat-curtains.jpg" alt="Box Pleat Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Box Pleat Curtains</h3>
+                            <p>Clean, structured pleats that create a tailored, formal appearance. Perfect for office and dining spaces.</p>
+                            <div class="product-price">KSh 20,000 - 50,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Box%20Pleat%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 25 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/pinch-pleat-curtains.jpg" alt="Pinch Pleat Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Pinch Pleat Curtains</h3>
+                            <p>Classic pleating style with fabric pinched at the top for elegant, uniform folds. Timeless and sophisticated.</p>
+                            <div class="product-price">KSh 18,000 - 45,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Pinch%20Pleat%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 26 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/goblet-pleat-curtains.jpg" alt="Goblet Pleat Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Goblet Pleat Curtains</h3>
+                            <p>Elegant pleats that resemble wine goblets when drawn. Creates a luxurious, formal atmosphere.</p>
+                            <div class="product-price">KSh 22,000 - 52,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Goblet%20Pleat%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 27 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/cartridge-pleat-curtains.jpg" alt="Cartridge Pleat Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Cartridge Pleat Curtains</h3>
+                            <p>Wide, deep pleats that create a substantial, gathered look. Ideal for heavier fabrics and formal settings.</p>
+                            <div class="product-price">KSh 20,000 - 48,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Cartridge%20Pleat%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 28 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/smocked-curtains.jpg" alt="Smocked Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Smocked Curtains</h3>
+                            <p>Decorative gathering technique that creates textured, gathered sections. Adds dimension and elegance.</p>
+                            <div class="product-price">KSh 16,000 - 40,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Smocked%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 29 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/cottage-curtains.jpg" alt="Cottage Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Cottage Curtains</h3>
+                            <p>Charming, casual style perfect for country homes. Light fabrics with simple, relaxed gathers.</p>
+                            <div class="product-price">KSh 12,000 - 28,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Cottage%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 30 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/country-curtains.jpg" alt="Country Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Country Curtains</h3>
+                            <p>Rustic charm with natural fabrics and simple designs. Perfect for farmhouse and countryside aesthetics.</p>
+                            <div class="product-price">KSh 14,000 - 32,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Country%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 31 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/modern-curtains.jpg" alt="Modern Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Modern Curtains</h3>
+                            <p>Clean lines and contemporary designs for minimalist interiors. Geometric patterns and solid colors.</p>
+                            <div class="product-price">KSh 15,000 - 38,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Modern%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 32 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/traditional-curtains.jpg" alt="Traditional Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Traditional Curtains</h3>
+                            <p>Classic patterns and rich fabrics for timeless elegance. Perfect for formal living spaces.</p>
+                            <div class="product-price">KSh 18,000 - 42,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Traditional%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 33 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/contemporary-curtains.jpg" alt="Contemporary Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Contemporary Curtains</h3>
+                            <p>Current trends with innovative designs and materials. Bold colors and unique patterns.</p>
+                            <div class="product-price">KSh 16,000 - 40,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Contemporary%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 34 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/minimalist-curtains.jpg" alt="Minimalist Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Minimalist Curtains</h3>
+                            <p>Simple, uncluttered designs with clean lines. Neutral colors and subtle patterns for modern spaces.</p>
+                            <div class="product-price">KSh 13,000 - 30,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Minimalist%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 35 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/bohemian-curtains.jpg" alt="Bohemian Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Bohemian Curtains</h3>
+                            <p>Free-spirited designs with eclectic patterns and textures. Perfect for artistic and eclectic interiors.</p>
+                            <div class="product-price">KSh 14,000 - 35,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Bohemian%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 36 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/rustic-curtains.jpg" alt="Rustic Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Rustic Curtains</h3>
+                            <p>Natural textures and earthy colors for a warm, inviting atmosphere. Burlap, linen, and natural fibers.</p>
+                            <div class="product-price">KSh 12,000 - 28,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Rustic%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 37 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/industrial-curtains.jpg" alt="Industrial Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Industrial Curtains</h3>
+                            <p>Urban style with metal accents and durable fabrics. Perfect for loft spaces and modern industrial aesthetics.</p>
+                            <div class="product-price">KSh 17,000 - 41,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Industrial%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 38 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/scandinavian-curtains.jpg" alt="Scandinavian Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Scandinavian Curtains</h3>
+                            <p>Clean, simple designs with light colors and natural materials. Hygge-inspired comfort and simplicity.</p>
+                            <div class="product-price">KSh 15,000 - 36,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Scandinavian%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 39 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/mediterranean-curtains.jpg" alt="Mediterranean Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Mediterranean Curtains</h3>
+                            <p>Bright colors and breezy fabrics inspired by coastal living. Light and airy for warm climates.</p>
+                            <div class="product-price">KSh 13,000 - 33,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Mediterranean%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 40 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/tropical-curtains.jpg" alt="Tropical Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Tropical Curtains</h3>
+                            <p>Vibrant patterns and palm-inspired designs. Perfect for adding exotic flair to any room.</p>
+                            <div class="product-price">KSh 16,000 - 39,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Tropical%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 41 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/floral-curtains.jpg" alt="Floral Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Floral Curtains</h3>
+                            <p>Beautiful flower patterns in various sizes and styles. From subtle prints to bold floral displays.</p>
+                            <div class="product-price">KSh 14,000 - 34,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Floral%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 42 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/geometric-curtains.jpg" alt="Geometric Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Geometric Curtains</h3>
+                            <p>Modern geometric patterns and shapes. Perfect for contemporary spaces seeking visual interest.</p>
+                            <div class="product-price">KSh 15,000 - 37,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Geometric%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 43 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/striped-curtains.jpg" alt="Striped Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Striped Curtains</h3>
+                            <p>Classic stripe patterns in various widths and colors. Timeless design that never goes out of style.</p>
+                            <div class="product-price">KSh 11,000 - 29,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Striped%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 44 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/images/solid-color-curtains.jpg" alt="Solid Color Curtains Collection">
+                        </div>
+                        <div class="product-content">
+                            <h3>Solid Color Curtains</h3>
+                            <p>Clean, versatile solid colors in every shade imaginable. Perfect canvas for any decor style.</p>
+                            <div class="product-price">KSh 10,000 - 26,000</div>
+                            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20know%20more%20about%20Solid%20Color%20Curtains" class="whatsapp-btn" target="_blank">
+                                💬
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collections CTA -->
+                <div class="collections-cta">
+                    <p>Can't find what you're looking for? Contact us for custom solutions!</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/<%= phoneIntl %>?text=I%20need%20help%20finding%20the%20right%20curtains%20for%20my%20space" class="btn btn-primary" target="_blank">
+                            Get Custom Quote
+                        </a>
+                        <a href="/contact" class="btn btn-secondary">
+                            Visit Our Showroom
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohaa Finest Curtains</h3>
+                    <p><strong>Think Curtains. Think Mohaa.</strong></p>
+                    <p>Kenya's trusted curtain experts — from measurement to installation nationwide.</p>
+                    <p>🏢 Moyale Mall, Eastleigh, Nairobi</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/services#curtain-sales">Curtain Sales</a></li>
+                        <li><a href="/services#free-measurement">Free Measurement</a></li>
+                        <li><a href="/services#installation">Professional Installation</a></li>
+                        <li><a href="/services#custom">Custom Curtains</a></li>
+                        <li><a href="/services#commercial">Office & Hotel Curtains</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <strong>Phone:</strong> <%= phone %></p>
+                    <p>💬 <strong>WhatsApp:</strong> <%= phone %></p>
+                    <p>🕒 <strong>Business Hours:</strong></p>
+                    <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved. | Designed by <a href="https://www.cresdynamics.com" target="_blank" style="text-decoration: underline;">Cres Dymics</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains WhatsApp" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+    </a>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

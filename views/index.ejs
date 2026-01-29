@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="best curtains in nairobi, curtains, mohaa curtains, curtains in eastleigh, curtains eastleigh, best luxury curtains nairobi, best luxury curtains, curtain sales, free measurement, professional installation, custom curtains, thermal curtains, blackout curtains, motorized curtains, sheer curtains, velvet curtains, turkish curtains, chinese curtains">
+    <meta name="author" content="Mohaa Finest Curtains">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="KE-30">
+    <meta name="geo.placename" content="Eastleigh, Nairobi">
+    <meta name="geo.position" content="-1.2767;36.8219">
+    <meta name="ICBM" content="-1.2767, 36.8219">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="/images/logo.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mohaa Finest Curtains">
+    <meta property="og:locale" content="en_KE">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/">
+    <meta property="twitter:title" content="<%= title %>">
+    <meta property="twitter:description" content="<%= description %>">
+    <meta property="twitter:image" content="/images/logo.jpeg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+    <!-- WhatsApp Business API ready -->
+    <meta property="business:contact_data:street_address" content="Eastleigh, 1st Avenue, 4th Street, Moyale Mall, Shop S26">
+    <meta property="business:contact_data:locality" content="Nairobi">
+    <meta property="business:contact_data:country_name" content="Kenya">
+    <meta property="business:contact_data:phone_number" content="+<%= phoneIntl %>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains Logo" class="logo">
+                <span class="brand-name">Mohaa Finest Curtains</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+                <a href="/collections" class="nav-link <%= currentPage === 'collections' ? 'active' : '' %>">Collections</a>
+                <a href="/services" class="nav-link <%= currentPage === 'services' ? 'active' : '' %>">Services</a>
+                <a href="/about" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">About</a>
+                <a href="/blog" class="nav-link <%= currentPage === 'blog' ? 'active' : '' %>">Curtain Tips</a>
+                <a href="/how-it-works" class="nav-link <%= currentPage === 'how-it-works' ? 'active' : '' %>">How It Works</a>
+                <a href="/gallery" class="nav-link <%= currentPage === 'gallery' ? 'active' : '' %>">Gallery</a>
+                <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Carousel -->
+<section class="hero">
+    <div class="hero-carousel">
+        <div class="carousel-slide active">
+            <img src="/images/WhatsApp Image 2026-01-25 at 22.42.56.jpeg" alt="Beautiful living room with professionally installed curtains">
+            <div class="hero-overlay">
+                <h1 class="hero-title">Elegance Measured to Perfection</h1>
+                <p class="hero-subtitle">Premium curtains, expert measurement & professional installation — serving the entire country of Kenya from our Eastleigh showroom.</p>
+                <div class="hero-buttons">
+                    <a href="/collections" class="btn btn-primary">
+                        Browse Collections
+                    </a>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20a%20quote%20for%20curtains" class="btn btn-secondary" target="_blank">
+                        WhatsApp for Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Additional carousel slides -->
+        <div class="carousel-slide">
+            <img src="/images/IMG_6791.JPG.jpeg" alt="Professional curtain showroom at Moyale Mall">
+            <div class="hero-overlay">
+                <h1 class="hero-title">Curtains ? Think Mohaa Finest</h1>
+                <p class="hero-subtitle">Located at Moyale Mall — Your trusted partner for all curtain needs.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20visit%20your%20shop%20at%20Moyale%20Mall" class="btn btn-primary" target="_blank">
+                        Visit Our Showroom
+                    </a>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=I%20need%20directions%20to%20your%20showroom" class="btn btn-secondary" target="_blank">
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Signals -->
+<section class="trust-signals">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <span class="trust-icon">📍</span>
+                <span>Moyale Mall, Eastleigh</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🚚</span>
+                <span>Fast Delivery</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">📏</span>
+                <span>Free Measurement</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🛠</span>
+                <span>Professional Installation</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem Section -->
+<section class="problem-solution">
+    <div class="container">
+        <div class="problem">
+            <h2>Tired of Curtains That Don't Fit or Last?</h2>
+            <ul class="pain-points">
+                <li>Wrong measurements leading to ill-fitting curtains</li>
+                <li>Poor quality fabric that fades quickly</li>
+                <li>No professional installation support</li>
+                <li>Sellers who disappear after you pay</li>
+            </ul>
+        </div>
+        <div class="solution">
+            <h2>We Handle Everything — Start to Finish</h2>
+            <ul class="solution-points">
+                <li>Free expert measurement at your location</li>
+                <li>Wide range of premium quality fabrics</li>
+                <li>Custom designs tailored to your space</li>
+                <li>Clean & professional installation service</li>
+            </ul>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="btn btn-primary" target="_blank">
+                        Talk to Us on WhatsApp
+                    </a>
+        </div>
+    </div>
+</section>
+
+<!-- Product Collections -->
+<section class="product-collections">
+    <div class="container">
+        <div class="collections-header">
+            <h2>Our Curtain Collections</h2>
+            <p>Quality curtains, accessories & smart solutions — professionally measured and installed.</p>
+        </div>
+        <div class="products-grid">
+            <!-- Turkish Curtains -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/images/WhatsApp Image 2026-01-25 at 22.42.56.jpeg" alt="Turkish Curtains - Premium fabrics">
+                </div>
+                <div class="product-content">
+                    <h3>Turkish Curtains</h3>
+                    <p>Premium fabrics with elegant finishes for modern homes and hotels.</p>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20want%20to%20get%20a%20quote%20for%20Turkish%20Curtains" class="btn btn-primary whatsapp-btn" target="_blank">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Chinese Curtains -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/images/IMG_6791.JPG.jpeg" alt="Chinese Curtains - Affordable and stylish">
+                </div>
+                <div class="product-content">
+                    <h3>Chinese Curtains</h3>
+                    <p>Affordable, stylish curtains available in many colors and designs.</p>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20want%20to%20get%20a%20quote%20for%20Chinese%20Curtains" class="btn btn-primary whatsapp-btn" target="_blank">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sheer Curtains -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/images/WhatsApp Image 2026-01-25 at 22.41.57.jpeg" alt="Sheer Curtains - Light and elegant">
+                </div>
+                <div class="product-content">
+                    <h3>Sheer Curtains</h3>
+                    <p>Light, elegant curtains that allow natural light while adding beauty.</p>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20want%20to%20get%20a%20quote%20for%20Sheer%20Curtains" class="btn btn-primary whatsapp-btn" target="_blank">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Curtain Rods & Accessories -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/images/IMG_6794.JPG.jpeg" alt="Curtain Rods & Accessories - Strong and reliable">
+                </div>
+                <div class="product-content">
+                    <h3>Curtain Rods & Accessories</h3>
+                    <p>Strong rods, rails, hooks and accessories for perfect installation.</p>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20want%20to%20get%20a%20quote%20for%20Curtain%20Rods%20%26%20Accessories" class="btn btn-primary whatsapp-btn" target="_blank">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Motorized Curtains -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/images/IMG_6793.JPG.jpeg" alt="Motorized Curtains - Smart and automated">
+                </div>
+                <div class="product-content">
+                    <h3>Motorized Curtains</h3>
+                    <p>Smart curtains with remote control — ideal for offices and luxury spaces.</p>
+                    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20want%20to%20get%20a%20quote%20for%20Motorized%20Curtains" class="btn btn-primary whatsapp-btn" target="_blank">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section CTA -->
+        <div class="collections-cta">
+            <p>Not sure what to choose? Let our experts guide you.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20advice%20on%20choosing%20the%20right%20curtains" class="btn btn-primary" target="_blank">
+                    WhatsApp Us for Advice
+                </a>
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20book%20free%20measurement%20for%20curtains" class="btn btn-secondary" target="_blank">
+                    Book Free Measurement
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Mohaa Comparison -->
+<section class="why-mohaa">
+    <div class="container">
+        <h2>Why Customers Choose Mohaa</h2>
+        <div class="comparison-table">
+            <div class="comparison-header">
+                <div class="other-sellers">Other Sellers</div>
+                <div class="mohaa-sellers">Mohaa Finest Curtains</div>
+            </div>
+            <div class="comparison-row">
+                <div class="other-sellers">Just sell fabric, no guidance</div>
+                <div class="mohaa-sellers">Expert advice on styles & fabrics</div>
+            </div>
+            <div class="comparison-row">
+                <div class="other-sellers">Guesswork measurements</div>
+                <div class="mohaa-sellers">Free professional measurement</div>
+            </div>
+            <div class="comparison-row">
+                <div class="other-sellers">No installation support</div>
+                <div class="mohaa-sellers">Professional installation service</div>
+            </div>
+            <div class="comparison-row">
+                <div class="other-sellers">Disappear after selling</div>
+                <div class="mohaa-sellers">Reliable after-sales support</div>
+            </div>
+            <div class="comparison-row">
+                <div class="other-sellers">Limited fabric choices</div>
+                <div class="mohaa-sellers">Wide range of premium fabrics</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Preview -->
+<section class="gallery-preview">
+    <div class="container">
+        <h2>Our Work Speaks for Itself</h2>
+        <div class="gallery-grid">
+            <img src="/images/IMG_6791.JPG.jpeg" alt="Beautiful curtain installation in living room">
+            <img src="/images/IMG_6792.JPG.jpeg" alt="Modern bedroom with blackout curtains">
+            <img src="/images/IMG_6793.JPG.jpeg" alt="Office space with professional curtains">
+            <img src="/images/IMG_6794.JPG.jpeg" alt="Curtain showroom display">
+            <img src="/images/IMG_6795.JPG.jpeg" alt="Custom curtain measurement service">
+            <img src="/images/IMG_6801.JPG.jpeg" alt="Professional curtain installation in progress">
+        </div>
+        <a href="/gallery" class="btn btn-primary">View Full Gallery</a>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works">
+    <div class="container">
+        <h2>How Mohaa Finest Curtains Works</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Contact Us</h3>
+                <p>WhatsApp or call for consultation</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Free Measurement</h3>
+                <p>Expert measurement at your location</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Choose & Design</h3>
+                <p>Select fabric and customize design</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Installation</h3>
+                <p>Professional installation & delivery</p>
+            </div>
+        </div>
+        <div class="areas-served">
+            <h3>Areas Served: Nationwide - Kenya</h3>
+            <p>Typical timeline: 3-7 days from measurement to installation</p>
+            <p style="margin-top: 10px;">Same-day service available for urgent requirements</p>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Ready to Transform Your Space?</h2>
+        <p style="font-size: 18px; margin-bottom: 30px;">Contact us today and get your free measurement consultation</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20want%20to%20transform%20my%20space%20with%20curtains" class="btn btn-primary" target="_blank">
+                WhatsApp Us Now
+            </a>
+            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20book%20free%20measurement%20for%20curtains" class="btn btn-secondary" target="_blank">
+                Book Free Measurement
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohaa Finest Curtains</h3>
+                    <p><strong>Think Curtains. Think Mohaa.</strong></p>
+                    <p>Kenya's trusted curtain experts — from measurement to installation nationwide.</p>
+                    <p>🏢 Eastleigh, 1st Avenue, 4th Street, Moyale Mall, Shop S26</p>
+                    <div class="social-media" style="margin-top: 15px;">
+                        <h4>Follow Us</h4>
+                        <div style="display: flex; gap: 15px; margin-top: 10px;">
+                            <a href="https://www.facebook.com/share/1AYCXkkWvB/?mibextid=wwXIfr" target="_blank" class="social-icon facebook" title="Follow us on Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/mohaa_finest_curtains?igsh=a3pwajJ2cWZsZzM%3D&utm_source=qr" target="_blank" class="social-icon instagram" title="Follow us on Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@mohaafinestcurtain?_r=1&_t=ZS-93MScIxUHS5" target="_blank" class="social-icon tiktok" title="Follow us on TikTok">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/services#curtain-sales">Curtain Sales</a></li>
+                        <li><a href="/services#free-measurement">Free Measurement</a></li>
+                        <li><a href="/services#installation">Professional Installation</a></li>
+                        <li><a href="/services#custom">Custom Curtains</a></li>
+                        <li><a href="/services#commercial">Office & Hotel Curtains</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <strong>Phone:</strong> <%= phone %></p>
+                    <p>💬 <strong>WhatsApp:</strong> <%= phone %></p>
+                    <p>🕒 <strong>Business Hours:</strong></p>
+                    <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 6:00 PM</p>
+                    <a href="https://wa.me/<%= phoneIntl %>" class="btn btn-primary" target="_blank" style="margin-top: 10px;">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved. | Designed by <a href="https://www.cresdynamics.com" target="_blank" style="text-decoration: underline;">Cres Dymics</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains WhatsApp" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+    </a>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

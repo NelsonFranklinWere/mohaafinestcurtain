@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="curtain services, curtain installation, free measurement, custom curtains, professional installation, curtain sales, wholesale curtains, office curtains, hotel curtains, curtain experts, curtain specialists, measurement services, installation services, curtain consultation, best curtain services nairobi, curtain services eastleigh">
+    <meta name="author" content="Mohaa Finest Curtains">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="KE-30">
+    <meta name="geo.placename" content="Eastleigh, Nairobi">
+    <meta name="geo.position" content="-1.2767;36.8219">
+    <meta name="ICBM" content="-1.2767, 36.8219">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/services">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="/images/logo.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mohaa Finest Curtains">
+    <meta property="og:locale" content="en_KE">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/services">
+    <meta property="twitter:title" content="<%= title %>">
+    <meta property="twitter:description" content="<%= description %>">
+    <meta property="twitter:image" content="/images/logo.jpeg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains Logo" class="logo">
+                <span class="brand-name">Mohaa Finest Curtains</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+                <a href="/collections" class="nav-link <%= currentPage === 'collections' ? 'active' : '' %>">Collections</a>
+                <a href="/services" class="nav-link <%= currentPage === 'services' ? 'active' : '' %>">Services</a>
+                <a href="/about" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">About</a>
+                <a href="/blog" class="nav-link <%= currentPage === 'blog' ? 'active' : '' %>">Curtain Tips</a>
+                <a href="/how-it-works" class="nav-link <%= currentPage === 'how-it-works' ? 'active' : '' %>">How It Works</a>
+                <a href="/gallery" class="nav-link <%= currentPage === 'gallery' ? 'active' : '' %>">Gallery</a>
+                <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Everything You Need — One Trusted Curtain Expert</h1>
+                <p>From consultation to installation, we provide complete curtain solutions for homes and businesses across the entire country of Kenya.</p>
+            </div>
+        </section>
+
+<section class="services-detailed">
+    <div class="container">
+        <!-- Curtain Sales Service -->
+        <div id="curtain-sales" class="service-detail">
+            <div class="service-content">
+                <div class="service-text">
+                    <h2>Curtain Sales</h2>
+                    <p>Discover our extensive collection of premium curtains designed for every space and style. From sheer elegance to complete blackout solutions, we offer quality fabrics that enhance your home or office.</p>
+
+                    <h3>Types of Curtains:</h3>
+                    <ul>
+                        <li><strong>Sheer Curtains:</strong> Light-filtering fabrics for privacy with natural light</li>
+                        <li><strong>Blackout Curtains:</strong> Complete light blockage for bedrooms and media rooms</li>
+                        <li><strong>Decorative Curtains:</strong> Stylish designs for living rooms and formal spaces</li>
+                        <li><strong>Thermal Curtains:</strong> Energy-efficient fabrics to regulate temperature</li>
+                        <li><strong>Voile & Net Curtains:</strong> Delicate fabrics for elegant window treatments</li>
+                    </ul>
+
+                    <h3>Why Choose Our Curtains:</h3>
+                    <ul>
+                        <li>Premium fabric quality that lasts</li>
+                        <li>Wide range of colors and patterns</li>
+                        <li>Custom sizing available</li>
+                        <li>Affordable pricing with quality guarantee</li>
+                        <li>Expert color matching services</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="/images/WhatsApp Image 2026-01-25 at 22.42.56.jpeg" alt="Beautiful curtain collection display">
+                </div>
+            </div>
+            <div class="service-cta">
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20see%20your%20curtain%20collection%20and%20get%20pricing" class="btn btn-primary" target="_blank">
+                    View Curtain Collection
+                </a>
+            </div>
+        </div>
+
+        <!-- Free Measurement Service -->
+        <div id="free-measurement" class="service-detail alt">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="/images/IMG_6795.JPG.jpeg" alt="Professional curtain measurement service">
+                </div>
+                <div class="service-text">
+                    <h2>Free Measurement Service</h2>
+                    <p>Accurate measurements are crucial for perfect-fitting curtains. Our experienced technicians provide free, professional measurement services at your location.</p>
+
+                    <h3>What We Measure:</h3>
+                    <ul>
+                        <li>Window width and height</li>
+                        <li>Curtain track/rod specifications</li>
+                        <li>Ceiling to floor measurements</li>
+                        <li>Wall space around windows</li>
+                        <li>Special architectural features</li>
+                    </ul>
+
+                    <h3>Measurement Benefits:</h3>
+                    <ul>
+                        <li>No more guesswork or wrong sizes</li>
+                        <li>Professional precision tools</li>
+                        <li>Detailed sketches and specifications</li>
+                        <li>On-site consultation and advice</li>
+                        <li>Follow-up support throughout the process</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-cta">
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20need%20free%20measurement%20for%20curtains%20at%20my%20location" class="btn btn-primary" target="_blank">
+                    Book Free Measurement
+                </a>
+            </div>
+        </div>
+
+        <!-- Professional Installation -->
+        <div id="installation" class="service-detail">
+            <div class="service-content">
+                <div class="service-text">
+                    <h2>Professional Installation</h2>
+                    <p>Our skilled installation team ensures your curtains are hung perfectly, with clean, precise work that enhances your space. We handle everything from simple hanging to complex custom installations.</p>
+
+                    <h3>Installation Services:</h3>
+                    <ul>
+                        <li>Curtain track and rod installation</li>
+                        <li>Eyelet and pencil pleat hanging</li>
+                        <li>Grommet and tab top curtains</li>
+                        <li>Valance and pelmet installation</li>
+                        <li>Motorized curtain systems</li>
+                    </ul>
+
+                    <h3>Why Professional Installation:</h3>
+                    <ul>
+                        <li>Clean, damage-free installation</li>
+                        <li>Proper curtain hardware setup</li>
+                        <li>Perfect alignment and leveling</li>
+                        <li>Safety and stability guaranteed</li>
+                        <li>Post-installation adjustments</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="/images/IMG_6801.JPG.jpeg" alt="Professional curtain installation service">
+                </div>
+            </div>
+            <div class="service-cta">
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20need%20professional%20curtain%20installation%20service" class="btn btn-primary" target="_blank">
+                    Get Installation Quote
+                </a>
+            </div>
+        </div>
+
+        <!-- Custom Curtains -->
+        <div id="custom" class="service-detail alt">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="/images/IMG_6793.JPG.jpeg" alt="Custom curtain design service">
+                </div>
+                <div class="service-text">
+                    <h2>Custom Curtains</h2>
+                    <p>Transform your space with bespoke curtains designed specifically for your unique requirements. From special sizes to custom fabrics, we create curtains that perfectly match your vision.</p>
+
+                    <h3>Custom Options:</h3>
+                    <ul>
+                        <li>Non-standard window sizes</li>
+                        <li>Special fabric combinations</li>
+                        <li>Custom color matching</li>
+                        <li>Logo and branding integration</li>
+                        <li>Acoustic and thermal properties</li>
+                    </ul>
+
+                    <h3>Design Process:</h3>
+                    <ul>
+                        <li>Initial consultation and concept development</li>
+                        <li>Fabric and style selection</li>
+                        <li>Technical specifications and prototyping</li>
+                        <li>Sample approval and final production</li>
+                        <li>Quality control and delivery</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-cta">
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20custom%20curtains%20designed%20for%20my%20specific%20needs" class="btn btn-primary" target="_blank">
+                    Design Custom Curtains
+                </a>
+            </div>
+        </div>
+
+        <!-- Office & Commercial -->
+        <div id="commercial" class="service-detail">
+            <div class="service-content">
+                <div class="service-text">
+                    <h2>Office & Commercial Curtains</h2>
+                    <p>Professional curtain solutions for offices, hotels, restaurants, and commercial spaces. We understand the unique requirements of commercial environments and provide durable, functional curtain solutions.</p>
+
+                    <h3>Commercial Applications:</h3>
+                    <ul>
+                        <li>Office meeting rooms and workspaces</li>
+                        <li>Hotel rooms and lobbies</li>
+                        <li>Restaurant and café windows</li>
+                        <li>Retail store fronts</li>
+                        <li>Healthcare facilities</li>
+                    </ul>
+
+                    <h3>Commercial Benefits:</h3>
+                    <ul>
+                        <li>Durable, commercial-grade fabrics</li>
+                        <li>Professional installation during off-hours</li>
+                        <li>Bulk pricing and project management</li>
+                        <li>Maintenance and replacement services</li>
+                        <li>Compliance with commercial standards</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="/images/IMG_6792.JPG.jpeg" alt="Commercial office curtain installation">
+                </div>
+            </div>
+            <div class="service-cta">
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20need%20curtains%20for%20my%20office/commercial%20space" class="btn btn-primary" target="_blank">
+                    Get Commercial Quote
+                </a>
+            </div>
+        </div>
+
+        <!-- Wholesale & Bulk -->
+        <div id="wholesale" class="service-detail alt">
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="/images/IMG_6794.JPG.jpeg" alt="Wholesale curtain showroom">
+                </div>
+                <div class="service-text">
+                    <h2>Wholesale & Bulk Orders</h2>
+                    <p>Special pricing and dedicated service for retailers, contractors, property managers, and bulk buyers. We offer competitive wholesale rates and flexible terms for larger orders.</p>
+
+                    <h3>Wholesale Benefits:</h3>
+                    <ul>
+                        <li>Competitive bulk pricing</li>
+                        <li>Dedicated account management</li>
+                        <li>Flexible payment terms</li>
+                        <li>Priority measurement and installation</li>
+                        <li>Custom packaging and branding</li>
+                    </ul>
+
+                    <h3>Perfect For:</h3>
+                    <ul>
+                        <li>Curtain retailers and resellers</li>
+                        <li>Property developers and managers</li>
+                        <li>Interior designers and decorators</li>
+                        <li>Contractors and builders</li>
+                        <li>Hotel and hospitality groups</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-cta">
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20wholesale%20pricing%20for%20bulk%20curtain%20orders" class="btn btn-primary" target="_blank">
+                    Get Wholesale Quote
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="final-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Our expert team is here to guide you through every step. From initial consultation to final installation, we ensure your complete satisfaction.</p>
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <span class="feature-icon">✓</span>
+                    <span>Free Consultation</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="feature-icon">✓</span>
+                    <span>Expert Recommendations</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="feature-icon">✓</span>
+                    <span>Professional Service</span>
+                </div>
+            </div>
+        </div>
+        <div class="cta-buttons">
+            <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20choosing%20the%20right%20curtain%20service" class="btn btn-primary" target="_blank">
+                Start Your Project
+            </a>
+            <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20to%20visit%20your%20showroom%20at%20Moyale%20Mall" class="btn btn-secondary" target="_blank">
+                Visit Our Showroom
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohaa Finest Curtains</h3>
+                    <p><strong>Think Curtains. Think Mohaa.</strong></p>
+                    <p>Kenya's trusted curtain experts — from measurement to installation nationwide.</p>
+                    <p>🏢 Eastleigh, 1st Avenue, 4th Street, Moyale Mall, Shop S26</p>
+                    <div class="social-media" style="margin-top: 15px;">
+                        <h4>Follow Us</h4>
+                        <div style="display: flex; gap: 15px; margin-top: 10px;">
+                            <a href="https://www.facebook.com/share/1AYCXkkWvB/?mibextid=wwXIfr" target="_blank" class="social-icon facebook" title="Follow us on Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/mohaa_finest_curtains?igsh=a3pwajJ2cWZsZzM%3D&utm_source=qr" target="_blank" class="social-icon instagram" title="Follow us on Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@mohaafinestcurtain?_r=1&_t=ZS-93MScIxUHS5" target="_blank" class="social-icon tiktok" title="Follow us on TikTok">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#curtain-sales">Curtain Sales</a></li>
+                        <li><a href="#free-measurement">Free Measurement</a></li>
+                        <li><a href="#installation">Professional Installation</a></li>
+                        <li><a href="#custom">Custom Curtains</a></li>
+                        <li><a href="#commercial">Office & Hotel Curtains</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <strong>Phone:</strong> <%= phone %></p>
+                    <p>💬 <strong>WhatsApp:</strong> <%= phone %></p>
+                    <p>🕒 <strong>Business Hours:</strong></p>
+                    <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 6:00 PM</p>
+                    <a href="https://wa.me/<%= phoneIntl %>" class="btn btn-primary" target="_blank" style="margin-top: 10px;">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved. | Designed by <a href="https://www.cresdynamics.com" target="_blank" style="text-decoration: underline;">Cres Dymics</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains WhatsApp" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+    </a>
+        💬 WhatsApp
+    </a>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

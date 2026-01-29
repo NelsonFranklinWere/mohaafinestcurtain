@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="author" content="Mohaa Finest Curtains">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="KE-30">
+    <meta name="geo.placename" content="Eastleigh, Nairobi">
+    <meta name="geo.position" content="-1.2767;36.8219">
+    <meta name="ICBM" content="-1.2767, 36.8219">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="/images/logo.jpeg">
+    <meta property="og:site_name" content="Mohaa Finest Curtains">
+    <meta property="og:locale" content="en_KE">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+    <style>
+        /* Make favicon circular */
+        link[rel="icon"] {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+        }
+    </style>
+    <!-- WhatsApp Business API ready -->
+    <meta property="business:contact_data:street_address" content="Moyale Mall, Eastleigh">
+    <meta property="business:contact_data:locality" content="Nairobi">
+    <meta property="business:contact_data:country_name" content="Kenya">
+    <meta property="business:contact_data:phone_number" content="<%= phoneIntl %>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains Logo" class="logo">
+                <span class="brand-name">Mohaa Finest Curtains</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">Home</a>
+                <a href="/collections" class="nav-link <%= currentPage === 'collections' ? 'active' : '' %>">Collections</a>
+                <a href="/services" class="nav-link <%= currentPage === 'services' ? 'active' : '' %>">Services</a>
+                <a href="/about" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">About</a>
+                <a href="/blog" class="nav-link <%= currentPage === 'blog' ? 'active' : '' %>">Curtain Tips</a>
+                <a href="/how-it-works" class="nav-link <%= currentPage === 'how-it-works' ? 'active' : '' %>">How It Works</a>
+                <a href="/gallery" class="nav-link <%= currentPage === 'gallery' ? 'active' : '' %>">Gallery</a>
+                <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <%- body %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohaa Finest Curtains</h3>
+                    <p><strong>Think Curtains. Think Mohaa.</strong></p>
+                    <p>Kenya's trusted curtain experts — from measurement to installation nationwide.</p>
+                    <p>🏢 Moyale Mall, Eastleigh, Nairobi</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/services#curtain-sales">Curtain Sales</a></li>
+                        <li><a href="/services#free-measurement">Free Measurement</a></li>
+                        <li><a href="/services#installation">Professional Installation</a></li>
+                        <li><a href="/services#custom">Custom Curtains</a></li>
+                        <li><a href="/services#commercial">Office & Hotel Curtains</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <strong>Phone:</strong> <%= phone %></p>
+                    <p>💬 <strong>WhatsApp:</strong> <%= phone %></p>
+                    <p>🕒 <strong>Business Hours:</strong></p>
+                    <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved. | Designed by <a href="https://www.cresdynamics.com" target="_blank" style="text-decoration: underline;">Cres Dymics</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Popup -->
+    <div id="whatsapp-popup" class="whatsapp-popup">
+        <div class="whatsapp-popup-content">
+            <div class="whatsapp-popup-header">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains" class="popup-logo">
+                <span class="popup-close">&times;</span>
+            </div>
+            <div class="whatsapp-popup-body">
+                <div class="whatsapp-message">WhatsApp Us</div>
+                <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20with%20curtains" class="btn btn-primary whatsapp-popup-btn" target="_blank">
+                    <img src="/images/logo.jpeg" alt="WhatsApp" class="btn-logo">
+                    Start Chat
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

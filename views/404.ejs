@@ -1,0 +1,54 @@
+<section class="error-page">
+    <div class="container">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
+            <p>The page you're looking for doesn't exist. Let's get you back to finding the perfect curtains!</p>
+
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary">Go Home</a>
+                <a href="/services" class="btn btn-secondary">View Services</a>
+                <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20help%20finding%20something%20on%20your%20website" class="btn btn-secondary" target="_blank">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.error-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: var(--light-grey);
+    text-align: center;
+}
+
+.error-content h1 {
+    font-size: 120px;
+    color: var(--primary-teal);
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.error-content h2 {
+    color: var(--dark-contrast);
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.error-content p {
+    font-size: 18px;
+    color: var(--text-grey);
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+</style>
