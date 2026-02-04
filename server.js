@@ -86,7 +86,7 @@ app.get('/contact', (req, res) => {
 app.get('/collections', (req, res) => {
     res.render('collections', {
         title: 'Collections - Mohaa Finest Curtains',
-        description: 'Explore our premium curtain collections. Wide range of styles, fabrics, and prices to suit every need.',
+        description: 'Explore our premium curtain collections. Wide range of styles and fabrics to suit every need.',
         currentPage: 'collections',
         phone: '0705155727',
         phoneIntl: '+254705155727'
