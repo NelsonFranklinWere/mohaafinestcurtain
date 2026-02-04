@@ -3,73 +3,137 @@ const fs = require('fs');
 const path = require('path');
 
 const inputDir = 'public/images';
+const compressedDir = path.join(inputDir, 'compressed');
 
-async function compressImages() {
+// Create compressed directory if it doesn't exist
+if (!fs.existsSync(compressedDir)) {
+  fs.mkdirSync(compressedDir, { recursive: true });
+}
+
+// Super aggressive compression settings for fastest loading
+const compressionSettings = {
+  // For web display - much more aggressive
+  web: {
+    jpeg: { quality: 65, progressive: true, mozjpeg: true },
+    png: { quality: 70, compressionLevel: 9, palette: true },
+    webp: { quality: 60, effort: 4 },
+    avif: { quality: 50, effort: 4 }
+  },
+  // For thumbnails
+  thumbnail: {
+    width: 400,
+    height: 300,
+    fit: 'cover',
+    jpeg: { quality: 70, progressive: true },
+    webp: { quality: 65, effort: 4 }
+  },
+  // For medium images
+  medium: {
+    width: 800,
+    height: 600,
+    fit: 'cover',
+    jpeg: { quality: 75, progressive: true },
+    webp: { quality: 70, effort: 4 }
+  }
+};
+
+async function compressImage(inputPath, outputPath, settings) {
+  const image = sharp(inputPath);
+
+  if (settings.width) {
+    image.resize(settings.width, settings.height, { fit: settings.fit });
+  }
+
+  if (outputPath.endsWith('.webp')) {
+    return image.webp(settings.webp).toFile(outputPath);
+  } else if (outputPath.endsWith('.avif')) {
+    return image.avif(settings.avif).toFile(outputPath);
+  } else if (outputPath.endsWith('.jpg') || outputPath.endsWith('.jpeg')) {
+    return image.jpeg(settings.jpeg).toFile(outputPath);
+  } else if (outputPath.endsWith('.png')) {
+    return image.png(settings.png).toFile(outputPath);
+  }
+}
+
+async function generateResponsiveImages(inputPath, filename) {
+  const baseName = path.parse(filename).name;
+  const compressedBasePath = path.join(compressedDir, baseName);
+
   try {
-    console.log('Starting image compression...');
+    // Generate ultra-compressed web versions
+    await compressImage(inputPath, `${compressedBasePath}_web.jpg`, compressionSettings.web);
+    await compressImage(inputPath, `${compressedBasePath}_web.webp`, compressionSettings.web);
+    await compressImage(inputPath, `${compressedBasePath}_web.avif`, compressionSettings.web);
+
+    // Generate responsive sizes
+    await compressImage(inputPath, `${compressedBasePath}_thumb.webp`, {
+      ...compressionSettings.thumbnail,
+      webp: compressionSettings.thumbnail.webp
+    });
+
+    await compressImage(inputPath, `${compressedBasePath}_medium.webp`, {
+      ...compressionSettings.medium,
+      webp: compressionSettings.medium.webp
+    });
+
+    console.log(`✓ Generated responsive versions for ${filename}`);
+  } catch (error) {
+    console.error(`Error generating responsive images for ${filename}:`, error.message);
+  }
+}
+
+async function ultraCompressImages() {
+  try {
+    console.log('🚀 Starting ULTRA FAST image compression for web...');
 
     const files = fs.readdirSync(inputDir);
     const imageFiles = files.filter(file =>
       /\.(jpg|jpeg|png)$/i.test(file) &&
       !file.includes('compressed') &&
+      !file.includes('temp_') &&
       file !== 'logo.jpeg' // Skip logo to preserve quality
     );
 
-    console.log(`Found ${imageFiles.length} images to compress`);
+    console.log(`📸 Found ${imageFiles.length} images to compress`);
+
+    let totalOriginalSize = 0;
+    let totalCompressedSize = 0;
 
     for (const file of imageFiles) {
       const inputPath = path.join(inputDir, file);
-      const tempPath = path.join(inputDir, `temp_${file}`);
 
       try {
-        // Get original file stats
         const originalStats = fs.statSync(inputPath);
         const originalSize = originalStats.size;
+        totalOriginalSize += originalSize;
 
-        // Compress based on file type
-        if (/\.(jpg|jpeg)$/i.test(file)) {
-          // Compress JPEG
-          await sharp(inputPath)
-            .jpeg({ quality: 80, progressive: true })
-            .toFile(tempPath);
-        } else if (/\.png$/i.test(file)) {
-          // Compress PNG
-          await sharp(inputPath)
-            .png({ quality: 80, compressionLevel: 9 })
-            .toFile(tempPath);
-        }
+        // Generate all compressed versions
+        await generateResponsiveImages(inputPath, file);
 
-        // Get compressed file stats
-        const compressedStats = fs.statSync(tempPath);
-        const compressedSize = compressedStats.size;
+        // Also create an ultra-compressed version to replace original
+        const ultraCompressedPath = path.join(compressedDir, `${path.parse(file).name}_ultra.jpg`);
+        await compressImage(inputPath, ultraCompressedPath, compressionSettings.web);
 
-        // Calculate compression ratio
-        const ratio = Math.round((compressedSize / originalSize) * 100);
+        const ultraStats = fs.statSync(ultraCompressedPath);
+        const ultraSize = ultraStats.size;
+        totalCompressedSize += ultraSize;
 
-        // Only replace if compression was successful (file got smaller)
-        if (compressedSize < originalSize) {
-          fs.renameSync(tempPath, inputPath);
-          console.log(`${file}: ${originalSize} bytes -> ${compressedSize} bytes (${ratio}%)`);
-        } else {
-          // Remove temp file if no compression achieved
-          fs.unlinkSync(tempPath);
-          console.log(`${file}: No compression needed (${originalSize} bytes)`);
-        }
+        const savings = ((originalSize - ultraSize) / originalSize * 100).toFixed(1);
+        console.log(`💾 ${file}: ${originalSize} → ${ultraSize} bytes (${savings}% smaller)`);
 
       } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        // Clean up temp file if it exists
-        if (fs.existsSync(tempPath)) {
-          fs.unlinkSync(tempPath);
-        }
+        console.error(`❌ Error processing ${file}:`, error.message);
       }
     }
 
-    console.log('Image compression completed successfully!');
+    const totalSavings = ((totalOriginalSize - totalCompressedSize) / totalOriginalSize * 100).toFixed(1);
+    console.log(`\n🎉 Compression complete!`);
+    console.log(`📊 Total savings: ${totalSavings}% (${(totalOriginalSize / 1024 / 1024).toFixed(2)}MB → ${(totalCompressedSize / 1024 / 1024).toFixed(2)}MB)`);
+    console.log(`⚡ Images are now optimized for LIGHTNING FAST loading!`);
 
   } catch (error) {
-    console.error('Error compressing images:', error);
+    console.error('💥 Error in ultra compression:', error);
   }
 }
 
-compressImages();
+ultraCompressImages();
