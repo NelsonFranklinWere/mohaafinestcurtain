@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <meta name="description" content="<%= description %>">
-    <meta name="keywords" content="curtain services, curtain installation, free measurement, custom curtains, professional installation, curtain sales, wholesale curtains, office curtains, hotel curtains, curtain experts, curtain specialists, measurement services, installation services, curtain consultation, best curtain services nairobi, curtain services eastleigh">
+    <meta name="keywords" content="<%= typeof keywords !== 'undefined' ? keywords : 'curtain experts, all types curtains, custom curtain designs, free measurement, site visit curtains' %>">
     <meta name="author" content="Mohaa Finest Curtains">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -13,26 +13,28 @@
     <meta name="geo.placename" content="Eastleigh, Nairobi">
     <meta name="geo.position" content="-1.2767;36.8219">
     <meta name="ICBM" content="-1.2767, 36.8219">
+    <link rel="canonical" href="<%= canonicalUrl %>">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.mohaafinestcurtains.co.ke/services">
+    <meta property="og:url" content="<%= canonicalUrl %>">
     <meta property="og:title" content="<%= title %>">
     <meta property="og:description" content="<%= description %>">
-    <meta property="og:image" content="/images/logo.jpeg">
+    <meta property="og:image" content="<%= ogImage %>">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Mohaa Finest Curtains">
     <meta property="og:locale" content="en_KE">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.mohaafinestcurtains.co.ke/services">
-    <meta property="twitter:title" content="<%= title %>">
-    <meta property="twitter:description" content="<%= description %>">
-    <meta property="twitter:image" content="/images/logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<%= canonicalUrl %>">
+    <meta name="twitter:title" content="<%= title %>">
+    <meta name="twitter:description" content="<%= description %>">
+    <meta name="twitter:image" content="<%= ogImage %>">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+    <%- include('partials/json-ld') %>
 </head>
 <body>
     <!-- Navigation -->
