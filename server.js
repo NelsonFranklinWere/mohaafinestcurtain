@@ -36,6 +36,7 @@ app.use(express.json());
 
 // ----- SEO: Sitemap (XML)
 app.get('/sitemap.xml', (req, res) => {
+    // lastmod is generated from today's date, so search engines see it update automatically (no manual change needed)
     const lastmod = new Date().toISOString().split('T')[0];
     const pages = [
         { path: '', priority: '1.0', changefreq: 'weekly' },
