@@ -7,7 +7,9 @@
       "@type": "LocalBusiness",
       "@id": "<%= baseUrl %>/#localbusiness",
       "name": "Mohaa Finest Curtains",
-      "description": "Trusted curtain experts in Kenya. All types of curtains, custom designs, good designs. Free measurement and site visits. Professional installation. Serving Nairobi, Eastleigh and nationwide.",
+      "alternateName": "Mohaa Finest Curtains Nairobi",
+      "slogan": "Think Curtains. Think Mohaa.",
+      "description": "Mohaa Finest Curtains is the curtain dealer in Eastleigh, Nairobi, known for quality curtains, free measurement and professional installation. We sell sheer, blackout and custom quality curtains and serve Nairobi, Eastleigh and Kenya from Moyale Mall, Shop S26.",
       "url": "<%= baseUrl %>",
       "telephone": "+<%= phoneIntl %>",
       "email": "info@mohaafinestcurtains.co.ke",
@@ -30,16 +32,21 @@
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "20:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" }
       ],
-      "areaServed": [{ "@type": "Country", "name": "Kenya" }, { "@type": "City", "name": "Nairobi" }],
+      "areaServed": [
+        { "@type": "Country", "name": "Kenya" },
+        { "@type": "City", "name": "Nairobi" },
+        { "@type": "Place", "name": "Eastleigh", "address": { "@type": "PostalAddress", "addressLocality": "Eastleigh", "addressRegion": "Nairobi" } },
+        { "@type": "State", "name": "Nairobi County" }
+      ],
       "sameAs": [],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Curtain products and services",
+        "name": "Curtain products and services in Nairobi",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curtain sales - all types" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom curtain designs" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free measurement and site visits" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional curtain installation" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curtain sales - sheer, blackout, luxury" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom curtain designs Nairobi" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free measurement and site visits Nairobi & Eastleigh" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional curtain installation Nairobi" } }
         ]
       }
     },
@@ -49,6 +56,14 @@
       "name": "Mohaa Finest Curtains",
       "url": "<%= baseUrl %>",
       "logo": "<%= baseUrl %>/images/logo.jpeg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "<%= baseUrl %>/#website",
+      "url": "<%= baseUrl %>",
+      "name": "Mohaa Finest Curtains - Quality Curtains Nairobi | Curtain Dealer Eastleigh",
+      "description": "Mohaa Finest Curtains is the curtain dealer in Eastleigh, Nairobi. Quality curtains, free measurement, professional installation.",
+      "publisher": { "@id": "<%= baseUrl %>/#organization" }
     }
   ]
 }

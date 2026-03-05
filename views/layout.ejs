@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    <meta name="description" content="<%= description %>">
+    <meta name="description" content="<%= typeof description !== 'undefined' ? description : 'Mohaa Finest Curtains — Curtains Nairobi, curtain shop Eastleigh. Premium curtains, free measurement & professional installation.' %>">
+    <meta name="keywords" content="curtains Nairobi, curtain shop Eastleigh, Mohaa Finest Curtains, curtains Kenya">
     <meta name="author" content="Mohaa Finest Curtains">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -12,9 +13,12 @@
     <meta name="geo.placename" content="Eastleigh, Nairobi">
     <meta name="geo.position" content="-1.2767;36.8219">
     <meta name="ICBM" content="-1.2767, 36.8219">
+    <% if (typeof canonicalUrl !== 'undefined' && canonicalUrl) { %><link rel="canonical" href="<%= canonicalUrl %>"><% } %>
+    <meta property="og:type" content="website">
+    <% if (typeof canonicalUrl !== 'undefined' && canonicalUrl) { %><meta property="og:url" content="<%= canonicalUrl %>"><% } %>
     <meta property="og:title" content="<%= title %>">
-    <meta property="og:description" content="<%= description %>">
-    <meta property="og:image" content="/images/logo.jpeg">
+    <meta property="og:description" content="<%= typeof description !== 'undefined' ? description : 'Mohaa Finest Curtains — Curtains Nairobi, Eastleigh.' %>">
+    <meta property="og:image" content="<%= typeof baseUrl !== 'undefined' ? baseUrl + '/images/logo.jpeg' : '/images/logo.jpeg' %>">
     <meta property="og:site_name" content="Mohaa Finest Curtains">
     <meta property="og:locale" content="en_KE">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -50,6 +54,7 @@
                 <a href="/blog" class="nav-link <%= currentPage === 'blog' ? 'active' : '' %>">Curtain Tips</a>
                 <a href="/how-it-works" class="nav-link <%= currentPage === 'how-it-works' ? 'active' : '' %>">How It Works</a>
                 <a href="/gallery" class="nav-link <%= currentPage === 'gallery' ? 'active' : '' %>">Gallery</a>
+                <a href="/faq" class="nav-link <%= currentPage === 'faq' ? 'active' : '' %>">FAQ</a>
                 <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">Contact</a>
             </div>
             <div class="mobile-menu-toggle">
