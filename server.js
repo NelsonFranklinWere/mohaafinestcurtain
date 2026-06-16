@@ -29,17 +29,14 @@ function renderPage(res, view, opts) {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Middleware
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// ----- SEO: Sitemap (XML)
+// ----- SEO: Sitemap & Robots (before static so dynamic routes take precedence)
 app.get('/sitemap.xml', (req, res) => {
-    // lastmod is generated from today's date, so search engines see it update automatically (no manual change needed)
     const lastmod = new Date().toISOString().split('T')[0];
     const pages = [
         { path: '', priority: '1.0', changefreq: 'weekly' },
+        { path: '/blackout-curtains', priority: '0.95', changefreq: 'monthly' },
+        { path: '/sheer-curtains', priority: '0.95', changefreq: 'monthly' },
+        { path: '/office-blinds', priority: '0.95', changefreq: 'monthly' },
         { path: '/faq', priority: '0.95', changefreq: 'monthly' },
         { path: '/collections', priority: '0.95', changefreq: 'weekly' },
         { path: '/services', priority: '0.95', changefreq: 'monthly' },
@@ -61,7 +58,6 @@ ${pages.map(p => `  <url>
 </urlset>`);
 });
 
-// ----- SEO: Robots.txt
 app.get('/robots.txt', (req, res) => {
     res.type('text/plain');
     res.send(`User-agent: *
@@ -71,15 +67,20 @@ Sitemap: ${BASE_URL}/sitemap.xml
 `);
 });
 
+// Middleware
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // ----- Nairobi-based SEO: page meta (titles, descriptions, keywords)
 // Target: "curtains Nairobi", "curtain shop Eastleigh", "best curtains Nairobi Kenya", local intent
 
 // Routes
 app.get('/', (req, res) => {
     renderPage(res, 'index', {
-        title: 'Quality Curtains Nairobi | Eastleigh Curtain Dealer — Mohaa Finest Curtains | Free Measurement',
-        description: 'Mohaa Finest Curtains is the curtain dealer in Eastleigh, Nairobi — quality curtains, free measurement & professional installation. Sheer, blackout & custom. Visit Moyale Mall or WhatsApp.',
-        keywords: 'curtains Nairobi, curtain dealer Eastleigh, quality curtains Nairobi, curtain shop Eastleigh, best curtains Nairobi Kenya, Mohaa Finest Curtains, curtain measurement Nairobi, curtain installation Nairobi, Moyale Mall curtains'
+        title: 'Custom Curtains Nairobi | Luxury Drapery Kenya',
+        description: 'Custom curtains & luxury drapery in Nairobi from Eastleigh\'s trusted showroom. Free measurement, expert fitting & premium fabrics at Moyale Mall. WhatsApp today.',
+        keywords: 'custom curtains Nairobi, luxury drapery Kenya, best curtains Nairobi, curtain shop Eastleigh, Mohaa Finest Curtains, premium window treatments Nairobi'
     });
 });
 
@@ -125,17 +126,44 @@ app.get('/blog', (req, res) => {
 
 app.get('/contact', (req, res) => {
     renderPage(res, 'contact', {
-        title: 'Contact — Curtain Showroom Eastleigh, Nairobi | Mohaa Finest Curtains',
-        description: 'Visit our curtain showroom at Moyale Mall, Eastleigh, Nairobi. Book a free measurement, WhatsApp or call. Serving Nairobi and Kenya.',
-        keywords: 'contact Mohaa curtains, curtain showroom Eastleigh Nairobi, Moyale Mall curtains, book curtain measurement Nairobi, WhatsApp curtains Kenya'
+        title: 'Curtain Installation Nairobi | Free Measurement',
+        description: 'Book professional curtain installation in Nairobi. Free on-site measurement, expert fitting & fast turnaround. Visit Moyale Mall or WhatsApp Mohaa Finest Curtains.',
+        keywords: 'curtain installation Nairobi, free curtain measurement, curtain fitting Nairobi, book curtain measurement Eastleigh, Mohaa Finest Curtains contact'
     });
 });
 
 app.get('/collections', (req, res) => {
     renderPage(res, 'collections', {
-        title: 'Quality Curtain Collections Nairobi — Sheer, Blackout & Custom | Mohaa Finest Curtains Eastleigh',
-        description: 'Quality curtain collections at Moyale Mall, Eastleigh: sheer, blackout, luxury & custom. Nairobi\'s curtain dealer for quality fabrics and styles.',
-        keywords: 'quality curtains Nairobi, curtain collections Eastleigh, sheer blackout curtains Nairobi, custom curtains Kenya, Mohaa Finest Curtains'
+        title: 'Sheer Curtains Nairobi | Blackout Drapes Eastleigh',
+        description: 'Browse sheer curtains, blackout drapes & custom fabrics at Mohaa Finest Curtains, Eastleigh. 44+ styles, free measurement & installation across Nairobi.',
+        keywords: 'sheer curtains Nairobi, blackout drapes Eastleigh, curtain collections Nairobi, custom curtains Kenya, Mohaa Finest Curtains'
+    });
+});
+
+app.get('/blackout-curtains', (req, res) => {
+    renderPage(res, 'blackout-curtains', {
+        currentPage: 'blackout-curtains',
+        title: 'Blackout Curtains Nairobi | Custom Light-Blocking Drapes',
+        description: 'Custom blackout curtains for bedrooms & home theaters in Nairobi. Velvet weights, overlapping tracks & professional installation from Eastleigh\'s curtain experts.',
+        keywords: 'blackout curtains Nairobi, custom blackout curtains Kenya, bedroom curtains Nairobi, home theater curtains, velvet blackout drapes Eastleigh'
+    });
+});
+
+app.get('/sheer-curtains', (req, res) => {
+    renderPage(res, 'sheer-curtains', {
+        currentPage: 'sheer-curtains',
+        title: 'Sheer Curtains Nairobi | Light Filtering Drapes Eastleigh',
+        description: 'Elegant sheer curtains for living rooms & bedrooms in Nairobi. Linen blends, daytime privacy & light-filtering drapes with free measurement at Moyale Mall.',
+        keywords: 'sheer curtains Nairobi, light filtering curtains Kenya, linen sheer drapes Eastleigh, living room curtains Nairobi, voile curtains Kenya'
+    });
+});
+
+app.get('/office-blinds', (req, res) => {
+    renderPage(res, 'office-blinds', {
+        currentPage: 'office-blinds',
+        title: 'Office Blinds Nairobi | Commercial Roller & Vertical Blinds',
+        description: 'Professional office blinds for Nairobi businesses. Vertical & roller blinds, corporate styling & expert commercial installation. Free site visit & bulk pricing.',
+        keywords: 'office blinds Nairobi, commercial blinds Kenya, roller blinds Nairobi, vertical blinds Eastleigh, corporate window treatments Kenya'
     });
 });
 

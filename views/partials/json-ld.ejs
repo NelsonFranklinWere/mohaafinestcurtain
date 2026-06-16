@@ -4,49 +4,77 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": "<%= baseUrl %>/#localbusiness",
+      "@type": "CurtainStore",
       "name": "Mohaa Finest Curtains",
-      "alternateName": "Mohaa Finest Curtains Nairobi",
-      "slogan": "Think Curtains. Think Mohaa.",
-      "description": "Mohaa Finest Curtains is the curtain dealer in Eastleigh, Nairobi, known for quality curtains, free measurement and professional installation. We sell sheer, blackout and custom quality curtains and serve Nairobi, Eastleigh and Kenya from Moyale Mall, Shop S26.",
+      "image": "<%= typeof ogImage !== 'undefined' ? ogImage : baseUrl + '/images/logo.jpeg' %>",
+      "@id": "<%= baseUrl %>/#curtainstore",
       "url": "<%= baseUrl %>",
       "telephone": "+<%= phoneIntl %>",
       "email": "info@mohaafinestcurtains.co.ke",
-      "image": "<%= typeof ogImage !== 'undefined' ? ogImage : baseUrl + '/images/logo.jpeg' %>",
-      "logo": "<%= baseUrl %>/images/logo.jpeg",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Moyale Mall, Shop S26, 1st Avenue, 4th Street, Eastleigh",
-        "addressLocality": "Eastleigh",
-        "addressRegion": "Nairobi",
+        "streetAddress": "Moyale Mall, General Waruinge Street, Eastleigh",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi County",
+        "postalCode": "00100",
         "addressCountry": "KE"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": -1.2767,
-        "longitude": 36.8219
+        "latitude": "-1.2755",
+        "longitude": "36.8485"
       },
       "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "20:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" }
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/share/1AYCXkkWvB/?mibextid=wwXIfr",
+        "https://www.instagram.com/mohaa_finest_curtains",
+        "https://www.tiktok.com/@mohaafinestcurtain"
       ],
       "areaServed": [
-        { "@type": "Country", "name": "Kenya" },
-        { "@type": "City", "name": "Nairobi" },
-        { "@type": "Place", "name": "Eastleigh", "address": { "@type": "PostalAddress", "addressLocality": "Eastleigh", "addressRegion": "Nairobi" } },
-        { "@type": "State", "name": "Nairobi County" }
+        {
+          "@type": "AdministrativeArea",
+          "name": "Nairobi"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Mombasa"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Kisumu"
+        }
       ],
-      "sameAs": [],
+      "hasMap": "https://maps.google.com/?q=Moyale+Mall+General+Waruinge+Street+Eastleigh+Nairobi",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Curtain products and services in Nairobi",
+        "name": "Window Treatments & Curtain Services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curtain sales - sheer, blackout, luxury" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom curtain designs Nairobi" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free measurement and site visits Nairobi & Eastleigh" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional curtain installation Nairobi" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Blackout Curtains", "url": "<%= baseUrl %>/blackout-curtains" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sheer Curtains & Light Filtering Drapes", "url": "<%= baseUrl %>/sheer-curtains" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Blinds & Commercial Window Treatments", "url": "<%= baseUrl %>/office-blinds" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free Curtain Measurement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professional Curtain Installation" } }
         ]
       }
     },
@@ -55,15 +83,20 @@
       "@id": "<%= baseUrl %>/#organization",
       "name": "Mohaa Finest Curtains",
       "url": "<%= baseUrl %>",
-      "logo": "<%= baseUrl %>/images/logo.jpeg"
+      "logo": "<%= baseUrl %>/images/logo.jpeg",
+      "sameAs": [
+        "https://www.facebook.com/share/1AYCXkkWvB/?mibextid=wwXIfr",
+        "https://www.instagram.com/mohaa_finest_curtains",
+        "https://www.tiktok.com/@mohaafinestcurtain"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "<%= baseUrl %>/#website",
       "url": "<%= baseUrl %>",
-      "name": "Mohaa Finest Curtains - Quality Curtains Nairobi | Curtain Dealer Eastleigh",
-      "description": "Mohaa Finest Curtains is the curtain dealer in Eastleigh, Nairobi. Quality curtains, free measurement, professional installation.",
-      "publisher": { "@id": "<%= baseUrl %>/#organization" }
+      "name": "Mohaa Finest Curtains",
+      "publisher": { "@id": "<%= baseUrl %>/#organization" },
+      "inLanguage": "en-KE"
     }
   ]
 }

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Mohaa Finest Curtains</title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= typeof keywords !== 'undefined' ? keywords : 'office blinds Nairobi, commercial blinds Kenya, roller blinds' %>">
+    <meta name="author" content="Mohaa Finest Curtains">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="KE-30">
+    <meta name="geo.placename" content="Eastleigh, Nairobi">
+    <meta name="geo.position" content="-1.2767;36.8219">
+    <meta name="ICBM" content="-1.2767, 36.8219">
+    <link rel="canonical" href="<%= canonicalUrl %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= canonicalUrl %>">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="<%= ogImage %>">
+    <meta property="og:site_name" content="Mohaa Finest Curtains">
+    <meta property="og:locale" content="en_KE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= title %>">
+    <meta name="twitter:description" content="<%= description %>">
+    <meta name="twitter:image" content="<%= ogImage %>">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+    <%- include('partials/json-ld') %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Office Blinds & Commercial Window Treatments Nairobi",
+      "description": "Vertical blinds, roller blinds and corporate window treatments for offices, hotels and commercial spaces across Nairobi.",
+      "provider": { "@id": "<%= baseUrl %>/#curtainstore" },
+      "areaServed": { "@type": "City", "name": "Nairobi" },
+      "url": "<%= canonicalUrl %>",
+      "audience": { "@type": "BusinessAudience", "audienceType": "Commercial clients" }
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains Logo" class="logo">
+                <span class="brand-name">Mohaa Finest Curtains</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/collections" class="nav-link">Collections</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/blog" class="nav-link">Curtain Tips</a>
+                <a href="/how-it-works" class="nav-link">How It Works</a>
+                <a href="/gallery" class="nav-link">Gallery</a>
+                <a href="/faq" class="nav-link">FAQ</a>
+                <a href="/contact" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Office Blinds &amp; Commercial Window Treatments in Nairobi</h1>
+                <p>Professional vertical and roller blinds for offices, boardrooms, hotels, and retail spaces — corporate styling with expert installation across Nairobi and Kenya.</p>
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20need%20office%20blinds%20for%20my%20commercial%20space" class="btn btn-primary" target="_blank">Get Commercial Quote</a>
+            </div>
+        </section>
+
+        <section class="landing-content">
+            <div class="container">
+                <div class="landing-grid">
+                    <div class="landing-text">
+                        <h2>Window Solutions for Nairobi's Commercial Spaces</h2>
+                        <p>First impressions matter in business. Outdated or mismatched window coverings can make an otherwise professional office feel unfinished. Mohaa Finest Curtains supplies and installs commercial-grade blinds tailored to boardrooms, open-plan offices, co-working spaces, hotels, clinics, and retail storefronts across Nairobi.</p>
+                        <p>We work directly with facility managers, interior designers, and business owners to deliver consistent styling across multiple rooms or entire buildings — with bulk pricing and scheduled installation that minimises workplace disruption.</p>
+
+                        <h2>Vertical Blinds, Roller Blinds &amp; Corporate Styling</h2>
+                        <p><strong>Vertical blinds</strong> remain the go-to choice for large glass facades and floor-to-ceiling windows. They offer precise light control, easy maintenance, and a clean corporate aesthetic. <strong>Roller blinds</strong> suit meeting rooms and private offices where a minimalist look and smooth operation are priorities.</p>
+                        <p>Choose from flame-retardant fabrics, solar-reflective materials for west-facing windows, and motorised options for conference rooms. Our team coordinates colour schemes with your brand palette — from neutral greys and whites to accent colours that reinforce your corporate identity.</p>
+
+                        <h2>Professional Installation &amp; Ongoing Support</h2>
+                        <p>Commercial projects demand precision. Our installers measure every opening, account for HVAC vents and safety regulations, and complete fitting on a timeline that works for your business — including after-hours and weekend slots for occupied offices.</p>
+                        <p>We serve clients from Westlands to the CBD, Eastleigh to Industrial Area, and nationwide for hotel groups and property developers. <a href="/contact">Book a free site visit</a> or explore our residential options including <a href="/blackout-curtains">blackout curtains</a> and <a href="/sheer-curtains">sheer drapes</a> for executive suites and guest rooms.</p>
+                    </div>
+                    <div class="landing-image">
+                        <img src="/images/IMG_6793.JPG.jpeg" alt="Office blinds installed in a Nairobi commercial space">
+                    </div>
+                </div>
+
+                <div class="landing-features">
+                    <div class="landing-feature-card">
+                        <h3>Vertical Blinds</h3>
+                        <p>Ideal for wide windows and glass partitions — durable slats with precise tilt and draw control.</p>
+                    </div>
+                    <div class="landing-feature-card">
+                        <h3>Roller Blinds</h3>
+                        <p>Sleek, space-saving solution for meeting rooms, private offices, and reception areas.</p>
+                    </div>
+                    <div class="landing-feature-card">
+                        <h3>Bulk &amp; Corporate Pricing</h3>
+                        <p>Competitive rates for multi-room and multi-site projects with dedicated account support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <h2>Upgrade Your Office Window Treatments</h2>
+                <p>Free site visit, corporate pricing, and professional installation — contact us today.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/<%= phoneIntl %>?text=I%20need%20office%20blinds%20for%20my%20business%20in%20Nairobi" class="btn btn-primary" target="_blank">WhatsApp for Quote</a>
+                    <a href="/services#commercial" class="btn btn-secondary">View Commercial Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohaa Finest Curtains</h3>
+                    <p><strong>Think Curtains. Think Mohaa.</strong></p>
+                    <p>Moyale Mall, General Waruinge St, Eastleigh, Nairobi, Kenya</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Specialty Pages</h3>
+                    <ul>
+                        <li><a href="/blackout-curtains">Blackout Curtains</a></li>
+                        <li><a href="/sheer-curtains">Sheer Curtains</a></li>
+                        <li><a href="/office-blinds">Office Blinds</a></li>
+                        <li><a href="/collections">All Collections</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <%= phone %></p>
+                    <a href="https://wa.me/<%= phoneIntl %>" class="btn btn-primary" target="_blank">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20office%20blinds" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="/images/logo.jpeg" alt="WhatsApp Mohaa Finest Curtains" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+    </a>
+    <script src="/js/script.js"></script>
+</body>
+</html>

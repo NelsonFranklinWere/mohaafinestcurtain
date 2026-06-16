@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Mohaa Finest Curtains</title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= typeof keywords !== 'undefined' ? keywords : 'sheer curtains Nairobi, light filtering drapes Eastleigh' %>">
+    <meta name="author" content="Mohaa Finest Curtains">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="KE-30">
+    <meta name="geo.placename" content="Eastleigh, Nairobi">
+    <meta name="geo.position" content="-1.2767;36.8219">
+    <meta name="ICBM" content="-1.2767, 36.8219">
+    <link rel="canonical" href="<%= canonicalUrl %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= canonicalUrl %>">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="<%= ogImage %>">
+    <meta property="og:site_name" content="Mohaa Finest Curtains">
+    <meta property="og:locale" content="en_KE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= title %>">
+    <meta name="twitter:description" content="<%= description %>">
+    <meta name="twitter:image" content="<%= ogImage %>">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+    <%- include('partials/json-ld') %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Sheer Curtains & Light Filtering Drapes Nairobi",
+      "description": "Elegant sheer curtains and linen-blend drapes for living rooms and bedrooms across Nairobi and Eastleigh.",
+      "provider": { "@id": "<%= baseUrl %>/#curtainstore" },
+      "areaServed": { "@type": "City", "name": "Nairobi" },
+      "url": "<%= canonicalUrl %>"
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/logo.jpeg" alt="Mohaa Finest Curtains Logo" class="logo">
+                <span class="brand-name">Mohaa Finest Curtains</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/collections" class="nav-link">Collections</a>
+                <a href="/services" class="nav-link">Services</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/blog" class="nav-link">Curtain Tips</a>
+                <a href="/how-it-works" class="nav-link">How It Works</a>
+                <a href="/gallery" class="nav-link">Gallery</a>
+                <a href="/faq" class="nav-link">FAQ</a>
+                <a href="/contact" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Sheer Curtains &amp; Light-Filtering Drapes in Nairobi</h1>
+                <p>Elegant daytime privacy, soft natural light, and refined living room styling — linen blends and voile fabrics tailored to your Nairobi home by Eastleigh's curtain specialists.</p>
+                <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20sheer%20curtains%20for%20my%20living%20room" class="btn btn-primary" target="_blank">Get Sheer Curtain Quote</a>
+            </div>
+        </section>
+
+        <section class="landing-content">
+            <div class="container">
+                <div class="landing-grid">
+                    <div class="landing-text">
+                        <h2>Daytime Privacy Without Losing Natural Light</h2>
+                        <p>Sheer curtains are the foundation of beautiful window styling in Nairobi homes. They diffuse harsh midday sun, soften street views, and create an airy atmosphere in living rooms, dining areas, and open-plan spaces — all while maintaining a sense of openness that heavy drapes cannot match.</p>
+                        <p>At Mohaa Finest Curtains, we help you choose the right opacity level. From whisper-thin voile for maximum brightness to semi-sheer linen blends that offer more daytime privacy, every panel is cut to your exact window dimensions.</p>
+
+                        <h2>Living Room Styling &amp; Design Trends</h2>
+                        <p>Modern Nairobi interiors favour layered window treatments — sheer panels paired with <a href="/blackout-curtains">blackout drapes</a> on a double track for flexible day-and-night control. Our design team recommends colours and textures that complement your furniture, flooring, and wall palette.</p>
+                        <p>Popular choices include crisp white sheers for minimalist apartments, warm ivory linen for coastal-inspired homes, and soft grey tones for contemporary office-adjacent living spaces in Westlands and Kilimani.</p>
+
+                        <h2>Linen Blends, Voile &amp; Durability</h2>
+                        <p>We source sheer fabrics engineered for Kenya's climate — breathable linen-polyester blends that resist yellowing and maintain their drape in humid conditions. Reinforced header tapes and quality stitching ensure your sheers look polished for years, not months.</p>
+                        <p>Pair sheer curtains with decorative tie-backs, pelmets, or motorised tracks for a finished look. Visit our Eastleigh showroom at Moyale Mall to feel fabric samples in person, or <a href="/contact">schedule a free measurement</a> and let our installers handle the rest.</p>
+                    </div>
+                    <div class="landing-image">
+                        <img src="/images/sheer-curtains.jpg" alt="Sheer curtains styled in a Nairobi living room">
+                    </div>
+                </div>
+
+                <div class="landing-features">
+                    <div class="landing-feature-card">
+                        <h3>Soft Light Filtering</h3>
+                        <p>Reduce glare and UV exposure while keeping rooms bright and welcoming throughout the day.</p>
+                    </div>
+                    <div class="landing-feature-card">
+                        <h3>Layered Window Design</h3>
+                        <p>Combine sheers with blackout panels on double tracks for complete flexibility at any hour.</p>
+                    </div>
+                    <div class="landing-feature-card">
+                        <h3>Climate-Ready Fabrics</h3>
+                        <p>Linen blends and voile selected for durability in Nairobi's sun and seasonal humidity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <h2>Transform Your Living Space with Sheers</h2>
+                <p>Free measurement and expert fabric advice — WhatsApp us or visit Moyale Mall today.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/<%= phoneIntl %>?text=I%20want%20sheer%20curtains%20in%20Nairobi" class="btn btn-primary" target="_blank">WhatsApp for Quote</a>
+                    <a href="/collections" class="btn btn-secondary">View All Collections</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mohaa Finest Curtains</h3>
+                    <p><strong>Think Curtains. Think Mohaa.</strong></p>
+                    <p>Moyale Mall, General Waruinge St, Eastleigh, Nairobi, Kenya</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Specialty Pages</h3>
+                    <ul>
+                        <li><a href="/blackout-curtains">Blackout Curtains</a></li>
+                        <li><a href="/sheer-curtains">Sheer Curtains</a></li>
+                        <li><a href="/office-blinds">Office Blinds</a></li>
+                        <li><a href="/collections">All Collections</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <%= phone %></p>
+                    <a href="https://wa.me/<%= phoneIntl %>" class="btn btn-primary" target="_blank">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <%= new Date().getFullYear() %> Mohaa Finest Curtains. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/<%= phoneIntl %>?text=Hi%20Mohaa%20Finest%20Curtains,%20I%20need%20sheer%20curtains" class="whatsapp-sticky" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="/images/logo.jpeg" alt="WhatsApp Mohaa Finest Curtains" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+    </a>
+    <script src="/js/script.js"></script>
+</body>
+</html>
